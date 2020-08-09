@@ -46,7 +46,6 @@ export default {
 <style scoped>
 .question-box-container {
   margin: 1%;
-  margin-top: 90px;
   text-align: center;
 }
 
