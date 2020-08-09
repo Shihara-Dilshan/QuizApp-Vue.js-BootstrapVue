@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <h3>Quice App</h3>
+    <Navbar />
   </div>
 </template>
 
 <script>
 
+import Navbar from './Navbar.vue';
 
 export default {
   name: 'App',
   components: {
-    
+    Navbar,
   }
 }
 </script>
