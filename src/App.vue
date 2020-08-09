@@ -31,11 +31,23 @@ export default {
       this.index < 9
         ? this.index++
         : console.log("There are no any questions left");
+
+      let QSBox = document.getElementById("QS");
+      QSBox.style.display = "none";
+      setTimeout(() => {
+        QSBox.style.display = "block";
+      }, 100);
     },
     previous() {
       this.index > 0
         ? this.index--
         : console.log("This is the very first question");
+        
+      let QSBox = document.getElementById("QS");
+      QSBox.style.display = "none";
+      setTimeout(() => {
+        QSBox.style.display = "block";
+      }, 100);
     },
     randomNumber() {
       return Math.ceil(Math.random() * 4);
@@ -73,4 +85,60 @@ export default {
 </script>
 
 <style>
+.test {
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s; /* Firefox < 16 */
+  -ms-animation: fadein 1s; /* Internet Explorer */
+  -o-animation: fadein 1s; /* Opera < 12.1 */
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 </style>

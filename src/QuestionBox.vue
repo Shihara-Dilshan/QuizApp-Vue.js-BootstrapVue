@@ -1,5 +1,5 @@
 <template>
-  <div class="question-box-container">
+  <div id="QS" class="question-box-container test">
     <b-jumbotron>
       <template v-slot:lead>{{questionDetails.question}}</template>
 
@@ -28,12 +28,12 @@ export default {
     choose(e) {
       if (e.target.innerHTML === this.questionDetails.correct_answer) {
         e.target.classList.add("correct");
-        setTimeout(()=> {
+        setTimeout(() => {
           e.target.classList.remove("correct");
         }, 1000);
-      }else{
+      } else {
         e.target.classList.add("wrong");
-        setTimeout(()=> {
+        setTimeout(() => {
           e.target.classList.remove("wrong");
         }, 1000);
       }
@@ -44,24 +44,49 @@ export default {
 
 
 <style scoped>
-.question-box-container {
-  margin: 1%;
-  text-align: center;
+@media only screen and (min-width: 608px) {
+  .question-box-container {
+    margin: 100px;
+    text-align: center;
+  }
+
+  .answers {
+    width: 90%;
+  }
+
+  #previous {
+    margin-right: 1%;
+  }
+
+  .correct {
+    background-color: #1b5e20;
+  }
+
+  .wrong {
+    background-color: #b71c1c;
+  }
 }
 
-.answers {
-  width: 90%;
-}
+@media only screen and (max-width: 1000px) {
+  .question-box-container {
+    margin: 1%;
+    text-align: center;
+  }
 
-#previous {
-  margin-right: 1%;
-}
+  .answers {
+    width: 90%;
+  }
 
-.correct {
-  background-color: #1b5e20;
-}
+  #previous {
+    margin-right: 1%;
+  }
 
-.wrong {
-  background-color: #b71c1c ;
+  .correct {
+    background-color: #1b5e20;
+  }
+
+  .wrong {
+    background-color: #b71c1c;
+  }
 }
 </style>
