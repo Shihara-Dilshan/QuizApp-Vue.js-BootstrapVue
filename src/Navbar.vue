@@ -7,8 +7,7 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item href="#">Link</b-nav-item>
-          <b-nav-item href="#" disabled>Disabled</b-nav-item>
+          <b-nav-item active>Counter: 4/10</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -42,7 +41,7 @@
 
 <script>
 export default {
-    name:"Navbar"
+  name: "Navbar"
 };
 </script>
 
